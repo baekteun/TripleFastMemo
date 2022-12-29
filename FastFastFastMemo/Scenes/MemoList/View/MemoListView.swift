@@ -54,7 +54,11 @@ struct MemoListView: View {
                         Spacer()
 
                         memoFABButton {
-                            intent.toggleNewMemo(toggle: !state.isOnNewMemo)
+                            if state.isOnNewMemo {
+                                intent.submitNewMemo(content: state.newText)
+                            } else {
+                                intent.toggleNewMemo(toggle: !state.isOnNewMemo)
+                            }
                         }
                     }
                 }

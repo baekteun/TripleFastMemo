@@ -47,6 +47,6 @@ struct FastFastFastMemoLockScreenWidget: Widget {
         }
         .configurationDisplayName("매우매우매우 빠른 메모")
         .description("빠르게 작성 ㄱㄱ")
-        .supportedFamilies([.accessoryCircular, .accessoryRectangular])
+        .supportedFamilies([.systemSmall, .systemMedium, .accessoryCircular, .accessoryRectangular])
     }
 }

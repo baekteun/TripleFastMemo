@@ -19,6 +19,9 @@ struct FastFastFastMemoWidgetEntryView: View {
         case .systemSmall:
             FFFMemoSmallWidgetView(entry: entry)
 
+        case .systemMedium:
+            FFFMemoMediumWidgetView(entry: entry)
+
         case .accessoryCircular:
             FFFMemoAccessoryCircularView()
 
@@ -35,9 +38,39 @@ private struct FFFMemoSmallWidgetView: View {
     let entry: FastFastFastMemoLockScreenTimelineProvider.Entry
 
     var body: some View {
-        VStack {
-            
+        VStack(alignment: .leading, spacing: 0) {
+            ForEach(Array(entry.memos.prefix(7)), id: \.id) { memo in
+                HStack {
+                    Text(memo.content)
+                        .font(.callout)
+
+                    Spacer()
+                }
+            }
         }
+        .padding(12)
+    }
+}
+
+private struct FFFMemoMediumWidgetView: View {
+    let entry: FastFastFastMemoLockScreenTimelineProvider.Entry
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 0) {
+            ForEach(Array(entry.memos.prefix(7)), id: \.id) { memo in
+                HStack {
+                    Text(memo.content)
+                        .font(.callout)
+
+                    Spacer()
+
+                    Text(memo.createdAt.custom("a hh시 mm분 ss초"))
+                        .font(.caption)
+                        .foregroundColor(.gray)
+                }
+            }
+        }
+        .padding(12)
     }
 }
 
@@ -63,9 +96,9 @@ private struct FFFMemoAccessoryRectangular: View {
 
                     Spacer()
                 }
-                .padding(4)
             }
         }
+        .padding(4)
         .frame(maxWidth: .infinity)
         .background {
             RoundedRectangle(cornerRadius: 8)

@@ -36,6 +36,7 @@
 		46AD56A7295DDED8006858AC /* FastFastFastMemoLockScreenWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD56A4295DDE01006858AC /* FastFastFastMemoLockScreenWidget.swift */; };
 		46AD56A8295DE6EF006858AC /* MemoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD564E295DADC8006858AC /* MemoEntity.swift */; };
 		46AD56AC295DE7E1006858AC /* FastFastFastMemoWidgetEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD56AA295DE7C8006858AC /* FastFastFastMemoWidgetEntryView.swift */; };
+		46AD56AD295DF55C006858AC /* DateUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD5681295DDACE006858AC /* DateUtil.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -429,6 +430,7 @@
 				46AD568F295DDCFE006858AC /* FastFastFastMemoWidgetBundle.swift in Sources */,
 				46AD56AC295DE7E1006858AC /* FastFastFastMemoWidgetEntryView.swift in Sources */,
 				46AD56A2295DDDE5006858AC /* LocalDatabase.swift in Sources */,
+				46AD56AD295DF55C006858AC /* DateUtil.swift in Sources */,
 				46AD56A7295DDED8006858AC /* FastFastFastMemoLockScreenWidget.swift in Sources */,
 				46AD56A8295DE6EF006858AC /* MemoEntity.swift in Sources */,
 			);
