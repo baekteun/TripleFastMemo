@@ -37,6 +37,14 @@
 		46AD56A8295DE6EF006858AC /* MemoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD564E295DADC8006858AC /* MemoEntity.swift */; };
 		46AD56AC295DE7E1006858AC /* FastFastFastMemoWidgetEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD56AA295DE7C8006858AC /* FastFastFastMemoWidgetEntryView.swift */; };
 		46AD56AD295DF55C006858AC /* DateUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD5681295DDACE006858AC /* DateUtil.swift */; };
+		46AD56B4295DF9BD006858AC /* MemoLockerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD56B3295DF9BD006858AC /* MemoLockerView.swift */; };
+		46AD56B7295DFDB8006858AC /* MemoLockerModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD56B6295DFDB8006858AC /* MemoLockerModelProtocol.swift */; };
+		46AD56B9295DFDE1006858AC /* MemoLockerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD56B8295DFDE1006858AC /* MemoLockerModel.swift */; };
+		46AD56BC295DFE09006858AC /* MemoLockerIntentProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD56BB295DFE09006858AC /* MemoLockerIntentProtocol.swift */; };
+		46AD56BE295DFE19006858AC /* MemoLockerIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD56BD295DFE19006858AC /* MemoLockerIntent.swift */; };
+		46AD56C0295DFE43006858AC /* MemoLockerView+build.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD56BF295DFE43006858AC /* MemoLockerView+build.swift */; };
+		46AD56C3295DFEF5006858AC /* MemoType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD56C2295DFEF5006858AC /* MemoType.swift */; };
+		46AD56C4295DFFA3006858AC /* MemoType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD56C2295DFEF5006858AC /* MemoType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +100,13 @@
 		46AD569E295DDD11006858AC /* FastFastFastMemoWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FastFastFastMemoWidgetExtension.entitlements; sourceTree = "<group>"; };
 		46AD56A4295DDE01006858AC /* FastFastFastMemoLockScreenWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastFastFastMemoLockScreenWidget.swift; sourceTree = "<group>"; };
 		46AD56AA295DE7C8006858AC /* FastFastFastMemoWidgetEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastFastFastMemoWidgetEntryView.swift; sourceTree = "<group>"; };
+		46AD56B3295DF9BD006858AC /* MemoLockerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoLockerView.swift; sourceTree = "<group>"; };
+		46AD56B6295DFDB8006858AC /* MemoLockerModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoLockerModelProtocol.swift; sourceTree = "<group>"; };
+		46AD56B8295DFDE1006858AC /* MemoLockerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoLockerModel.swift; sourceTree = "<group>"; };
+		46AD56BB295DFE09006858AC /* MemoLockerIntentProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoLockerIntentProtocol.swift; sourceTree = "<group>"; };
+		46AD56BD295DFE19006858AC /* MemoLockerIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoLockerIntent.swift; sourceTree = "<group>"; };
+		46AD56BF295DFE43006858AC /* MemoLockerView+build.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MemoLockerView+build.swift"; sourceTree = "<group>"; };
+		46AD56C2295DFEF5006858AC /* MemoType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +186,7 @@
 		46AD5649295DAD32006858AC /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				46AD56C1295DFEF0006858AC /* Enum */,
 				46AD5680295DDAC5006858AC /* Extensions */,
 				46AD567D295DC836006858AC /* Components */,
 				46AD5655295DB085006858AC /* MVI */,
@@ -198,6 +214,7 @@
 		46AD5650295DAE7D006858AC /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				46AD56AF295DF9A7006858AC /* MemoLocker */,
 				46AD5658295DB11A006858AC /* MemoList */,
 			);
 			path = Scenes;
@@ -292,6 +309,51 @@
 				46AD56AA295DE7C8006858AC /* FastFastFastMemoWidgetEntryView.swift */,
 			);
 			path = LcokScreen;
+			sourceTree = "<group>";
+		};
+		46AD56AF295DF9A7006858AC /* MemoLocker */ = {
+			isa = PBXGroup;
+			children = (
+				46AD56BA295DFDFE006858AC /* Intent */,
+				46AD56B5295DFDAD006858AC /* Model */,
+				46AD56B0295DF9AA006858AC /* View */,
+			);
+			path = MemoLocker;
+			sourceTree = "<group>";
+		};
+		46AD56B0295DF9AA006858AC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				46AD56B3295DF9BD006858AC /* MemoLockerView.swift */,
+				46AD56BF295DFE43006858AC /* MemoLockerView+build.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		46AD56B5295DFDAD006858AC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				46AD56B6295DFDB8006858AC /* MemoLockerModelProtocol.swift */,
+				46AD56B8295DFDE1006858AC /* MemoLockerModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		46AD56BA295DFDFE006858AC /* Intent */ = {
+			isa = PBXGroup;
+			children = (
+				46AD56BB295DFE09006858AC /* MemoLockerIntentProtocol.swift */,
+				46AD56BD295DFE19006858AC /* MemoLockerIntent.swift */,
+			);
+			path = Intent;
+			sourceTree = "<group>";
+		};
+		46AD56C1295DFEF0006858AC /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				46AD56C2295DFEF5006858AC /* MemoType.swift */,
+			);
+			path = Enum;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -404,7 +466,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46AD56B4295DF9BD006858AC /* MemoLockerView.swift in Sources */,
 				46AD5682295DDACE006858AC /* DateUtil.swift in Sources */,
+				46AD56B9295DFDE1006858AC /* MemoLockerModel.swift in Sources */,
 				46AD567F295DC83C006858AC /* DeferView.swift in Sources */,
 				46AD565D295DB175006858AC /* MemoListIntent.swift in Sources */,
 				46AD5648295DA8F9006858AC /* LocalDatabase.swift in Sources */,
@@ -412,11 +476,16 @@
 				46AD5654295DAEAE006858AC /* MemoListView.swift in Sources */,
 				46AD565B295DB143006858AC /* MemoListIntentProtocol.swift in Sources */,
 				46AD5657295DB08E006858AC /* MVIContainer.swift in Sources */,
+				46AD56B7295DFDB8006858AC /* MemoLockerModelProtocol.swift in Sources */,
 				46AD5662295DB34A006858AC /* MemoListModel.swift in Sources */,
 				46AD564F295DADC8006858AC /* MemoEntity.swift in Sources */,
+				46AD56C0295DFE43006858AC /* MemoLockerView+build.swift in Sources */,
+				46AD56BC295DFE09006858AC /* MemoLockerIntentProtocol.swift in Sources */,
 				46AD5660295DB1DD006858AC /* MemoListModelProtocol.swift in Sources */,
 				46AD5634295DA820006858AC /* FastFastFastMemoApp.swift in Sources */,
+				46AD56C3295DFEF5006858AC /* MemoType.swift in Sources */,
 				46AD564C295DAD3E006858AC /* AppGroup.swift in Sources */,
+				46AD56BE295DFE19006858AC /* MemoLockerIntent.swift in Sources */,
 				46AD5665295DB4E9006858AC /* MemoListView+build.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -433,6 +502,7 @@
 				46AD56AD295DF55C006858AC /* DateUtil.swift in Sources */,
 				46AD56A7295DDED8006858AC /* FastFastFastMemoLockScreenWidget.swift in Sources */,
 				46AD56A8295DE6EF006858AC /* MemoEntity.swift in Sources */,
+				46AD56C4295DFFA3006858AC /* MemoType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

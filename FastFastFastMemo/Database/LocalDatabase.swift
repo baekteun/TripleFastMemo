@@ -11,6 +11,7 @@ public struct LocalDatabase {
                 t.column("id", .text).primaryKey(onConflict: .replace).notNull()
                 t.column("content", .text)
                 t.column("createdAt", .date)
+                t.column("memoType", .text).defaults(to: "PUBLISH")
             }
         }
     }
@@ -40,12 +41,30 @@ public struct LocalDatabase {
         }
     }
 
+    public func readRecords<Record: FetchableRecord & PersistableRecord>(
+        as record: Record.Type,
+        query: (Record.Type) throws -> [Record]
+    ) throws -> [Record] {
+        try dbQueue.write { db in
+            try query(record)
+        }
+    }
+
     public func readRecord<Record: FetchableRecord & PersistableRecord>(
         record: Record.Type,
         at key: some DatabaseValueConvertible
     ) throws -> Record? {
         try dbQueue.read { db in
             try record.fetchOne(db, key: key)
+        }
+    }
+
+    public func readRecord<Record: FetchableRecord & PersistableRecord>(
+        as record: Record.Type,
+        query: (Record.Type) throws -> Record
+    ) throws -> Record {
+        try dbQueue.write { db in
+            try query(record)
         }
     }
 

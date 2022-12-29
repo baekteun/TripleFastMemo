@@ -41,8 +41,14 @@ struct MemoListView: View {
                                     }
                                 }
                                 .tint(.red)
+
+                                Button("보관") {
+                                    
+                                }
+                                .tint(.gray)
                             }
                             .listRowSeparator(.hidden)
+                            .listRowInsets(.init(top: 8, leading: 16, bottom: 8, trailing: 16))
                     }
                     .listStyle(.plain)
                 }

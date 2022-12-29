@@ -36,7 +36,8 @@ final class MemoListIntent: MemoListIntentProtocol {
         let memo = MemoEntity(
             id: UUID().uuidString,
             content: content,
-            createdAt: Date()
+            createdAt: Date(),
+            memoType: .publish
         )
         try? database.save(record: memo)
         guard let memoList = try? database.readRecords(

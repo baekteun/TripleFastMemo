@@ -1,4 +1,3 @@
-
 protocol MemoListStateProtocol {
     var memoList: [MemoEntity] { get }
     var isOnNewMemo: Bool { get }

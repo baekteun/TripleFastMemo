@@ -7,3 +7,4 @@ protocol MemoListIntentProtocol {
     func newTextChanged(new: String)
     func submitNewMemo(content: String)
 }
+
