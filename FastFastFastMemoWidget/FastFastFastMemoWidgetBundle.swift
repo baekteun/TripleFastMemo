@@ -11,7 +11,9 @@ import SwiftUI
 @main
 struct FastFastFastMemoWidgetBundle: WidgetBundle {
     var body: some Widget {
-        FastFastFastMemoWidget()
-        FastFastFastMemoWidgetLiveActivity()
+        FastFastFastMemoLockScreenWidget()
+        if #available(iOSApplicationExtension 16.1, *) {
+            FastFastFastMemoWidgetLiveActivity()
+        }
     }
 }

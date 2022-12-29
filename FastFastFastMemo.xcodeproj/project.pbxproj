@@ -22,21 +22,20 @@
 		46AD5660295DB1DD006858AC /* MemoListModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD565F295DB1DD006858AC /* MemoListModelProtocol.swift */; };
 		46AD5662295DB34A006858AC /* MemoListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD5661295DB34A006858AC /* MemoListModel.swift */; };
 		46AD5665295DB4E9006858AC /* MemoListView+build.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD5664295DB4E9006858AC /* MemoListView+build.swift */; };
-		46AD5670295DB939006858AC /* NewMemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD566F295DB938006858AC /* NewMemoView.swift */; };
-		46AD5673295DB94E006858AC /* NewMemoModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD5672295DB94E006858AC /* NewMemoModelProtocol.swift */; };
-		46AD5675295DB969006858AC /* NewMemoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD5674295DB969006858AC /* NewMemoModel.swift */; };
-		46AD5678295DB989006858AC /* NewMemoIntentProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD5677295DB989006858AC /* NewMemoIntentProtocol.swift */; };
-		46AD567A295DB99D006858AC /* NewMemoIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD5679295DB99D006858AC /* NewMemoIntent.swift */; };
-		46AD567C295DB9C6006858AC /* NewMemoView+build.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD567B295DB9C6006858AC /* NewMemoView+build.swift */; };
 		46AD567F295DC83C006858AC /* DeferView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD567E295DC83C006858AC /* DeferView.swift */; };
 		46AD5682295DDACE006858AC /* DateUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD5681295DDACE006858AC /* DateUtil.swift */; };
 		46AD568A295DDCFE006858AC /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46AD5689295DDCFE006858AC /* WidgetKit.framework */; };
 		46AD568C295DDCFE006858AC /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46AD568B295DDCFE006858AC /* SwiftUI.framework */; };
 		46AD568F295DDCFE006858AC /* FastFastFastMemoWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD568E295DDCFE006858AC /* FastFastFastMemoWidgetBundle.swift */; };
 		46AD5691295DDCFE006858AC /* FastFastFastMemoWidgetLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD5690295DDCFE006858AC /* FastFastFastMemoWidgetLiveActivity.swift */; };
-		46AD5693295DDCFE006858AC /* FastFastFastMemoWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD5692295DDCFE006858AC /* FastFastFastMemoWidget.swift */; };
 		46AD5695295DDD00006858AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46AD5694295DDD00006858AC /* Assets.xcassets */; };
 		46AD5699295DDD00006858AC /* FastFastFastMemoWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 46AD5687295DDCFE006858AC /* FastFastFastMemoWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		46AD56A1295DDDDB006858AC /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = 46AD56A0295DDDDB006858AC /* GRDB */; };
+		46AD56A2295DDDE5006858AC /* LocalDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD5647295DA8F9006858AC /* LocalDatabase.swift */; };
+		46AD56A3295DDDEC006858AC /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD564B295DAD3E006858AC /* AppGroup.swift */; };
+		46AD56A7295DDED8006858AC /* FastFastFastMemoLockScreenWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD56A4295DDE01006858AC /* FastFastFastMemoLockScreenWidget.swift */; };
+		46AD56A8295DE6EF006858AC /* MemoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD564E295DADC8006858AC /* MemoEntity.swift */; };
+		46AD56AC295DE7E1006858AC /* FastFastFastMemoWidgetEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD56AA295DE7C8006858AC /* FastFastFastMemoWidgetEntryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,12 +79,6 @@
 		46AD5661295DB34A006858AC /* MemoListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListModel.swift; sourceTree = "<group>"; };
 		46AD5664295DB4E9006858AC /* MemoListView+build.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MemoListView+build.swift"; sourceTree = "<group>"; };
 		46AD566A295DB804006858AC /* FastFastFastMemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FastFastFastMemo.entitlements; sourceTree = "<group>"; };
-		46AD566F295DB938006858AC /* NewMemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMemoView.swift; sourceTree = "<group>"; };
-		46AD5672295DB94E006858AC /* NewMemoModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMemoModelProtocol.swift; sourceTree = "<group>"; };
-		46AD5674295DB969006858AC /* NewMemoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMemoModel.swift; sourceTree = "<group>"; };
-		46AD5677295DB989006858AC /* NewMemoIntentProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMemoIntentProtocol.swift; sourceTree = "<group>"; };
-		46AD5679295DB99D006858AC /* NewMemoIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMemoIntent.swift; sourceTree = "<group>"; };
-		46AD567B295DB9C6006858AC /* NewMemoView+build.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewMemoView+build.swift"; sourceTree = "<group>"; };
 		46AD567E295DC83C006858AC /* DeferView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeferView.swift; sourceTree = "<group>"; };
 		46AD5681295DDACE006858AC /* DateUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtil.swift; sourceTree = "<group>"; };
 		46AD5687295DDCFE006858AC /* FastFastFastMemoWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = FastFastFastMemoWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,10 +86,11 @@
 		46AD568B295DDCFE006858AC /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		46AD568E295DDCFE006858AC /* FastFastFastMemoWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastFastFastMemoWidgetBundle.swift; sourceTree = "<group>"; };
 		46AD5690295DDCFE006858AC /* FastFastFastMemoWidgetLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastFastFastMemoWidgetLiveActivity.swift; sourceTree = "<group>"; };
-		46AD5692295DDCFE006858AC /* FastFastFastMemoWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastFastFastMemoWidget.swift; sourceTree = "<group>"; };
 		46AD5694295DDD00006858AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		46AD5696295DDD00006858AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46AD569E295DDD11006858AC /* FastFastFastMemoWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FastFastFastMemoWidgetExtension.entitlements; sourceTree = "<group>"; };
+		46AD56A4295DDE01006858AC /* FastFastFastMemoLockScreenWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastFastFastMemoLockScreenWidget.swift; sourceTree = "<group>"; };
+		46AD56AA295DE7C8006858AC /* FastFastFastMemoWidgetEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastFastFastMemoWidgetEntryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46AD56A1295DDDDB006858AC /* GRDB in Frameworks */,
 				46AD568C295DDCFE006858AC /* SwiftUI.framework in Frameworks */,
 				46AD568A295DDCFE006858AC /* WidgetKit.framework in Frameworks */,
 			);
@@ -202,7 +197,6 @@
 		46AD5650295DAE7D006858AC /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				46AD566B295DB922006858AC /* NewMemo */,
 				46AD5658295DB11A006858AC /* MemoList */,
 			);
 			path = Scenes;
@@ -253,43 +247,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		46AD566B295DB922006858AC /* NewMemo */ = {
-			isa = PBXGroup;
-			children = (
-				46AD5676295DB982006858AC /* Intent */,
-				46AD5671295DB940006858AC /* Model */,
-				46AD566C295DB929006858AC /* View */,
-			);
-			path = NewMemo;
-			sourceTree = "<group>";
-		};
-		46AD566C295DB929006858AC /* View */ = {
-			isa = PBXGroup;
-			children = (
-				46AD566F295DB938006858AC /* NewMemoView.swift */,
-				46AD567B295DB9C6006858AC /* NewMemoView+build.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		46AD5671295DB940006858AC /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				46AD5672295DB94E006858AC /* NewMemoModelProtocol.swift */,
-				46AD5674295DB969006858AC /* NewMemoModel.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		46AD5676295DB982006858AC /* Intent */ = {
-			isa = PBXGroup;
-			children = (
-				46AD5677295DB989006858AC /* NewMemoIntentProtocol.swift */,
-				46AD5679295DB99D006858AC /* NewMemoIntent.swift */,
-			);
-			path = Intent;
-			sourceTree = "<group>";
-		};
 		46AD567D295DC836006858AC /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -318,13 +275,22 @@
 		46AD568D295DDCFE006858AC /* FastFastFastMemoWidget */ = {
 			isa = PBXGroup;
 			children = (
+				46AD56A9295DE792006858AC /* LcokScreen */,
 				46AD568E295DDCFE006858AC /* FastFastFastMemoWidgetBundle.swift */,
 				46AD5690295DDCFE006858AC /* FastFastFastMemoWidgetLiveActivity.swift */,
-				46AD5692295DDCFE006858AC /* FastFastFastMemoWidget.swift */,
 				46AD5694295DDD00006858AC /* Assets.xcassets */,
 				46AD5696295DDD00006858AC /* Info.plist */,
 			);
 			path = FastFastFastMemoWidget;
+			sourceTree = "<group>";
+		};
+		46AD56A9295DE792006858AC /* LcokScreen */ = {
+			isa = PBXGroup;
+			children = (
+				46AD56A4295DDE01006858AC /* FastFastFastMemoLockScreenWidget.swift */,
+				46AD56AA295DE7C8006858AC /* FastFastFastMemoWidgetEntryView.swift */,
+			);
+			path = LcokScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -365,6 +331,9 @@
 			dependencies = (
 			);
 			name = FastFastFastMemoWidgetExtension;
+			packageProductDependencies = (
+				46AD56A0295DDDDB006858AC /* GRDB */,
+			);
 			productName = FastFastFastMemoWidgetExtension;
 			productReference = 46AD5687295DDCFE006858AC /* FastFastFastMemoWidgetExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
@@ -434,11 +403,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46AD5673295DB94E006858AC /* NewMemoModelProtocol.swift in Sources */,
 				46AD5682295DDACE006858AC /* DateUtil.swift in Sources */,
-				46AD5670295DB939006858AC /* NewMemoView.swift in Sources */,
 				46AD567F295DC83C006858AC /* DeferView.swift in Sources */,
-				46AD5678295DB989006858AC /* NewMemoIntentProtocol.swift in Sources */,
 				46AD565D295DB175006858AC /* MemoListIntent.swift in Sources */,
 				46AD5648295DA8F9006858AC /* LocalDatabase.swift in Sources */,
 				46AD5636295DA820006858AC /* ContentView.swift in Sources */,
@@ -447,12 +413,9 @@
 				46AD5657295DB08E006858AC /* MVIContainer.swift in Sources */,
 				46AD5662295DB34A006858AC /* MemoListModel.swift in Sources */,
 				46AD564F295DADC8006858AC /* MemoEntity.swift in Sources */,
-				46AD567A295DB99D006858AC /* NewMemoIntent.swift in Sources */,
 				46AD5660295DB1DD006858AC /* MemoListModelProtocol.swift in Sources */,
 				46AD5634295DA820006858AC /* FastFastFastMemoApp.swift in Sources */,
 				46AD564C295DAD3E006858AC /* AppGroup.swift in Sources */,
-				46AD5675295DB969006858AC /* NewMemoModel.swift in Sources */,
-				46AD567C295DB9C6006858AC /* NewMemoView+build.swift in Sources */,
 				46AD5665295DB4E9006858AC /* MemoListView+build.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -461,9 +424,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46AD56A3295DDDEC006858AC /* AppGroup.swift in Sources */,
 				46AD5691295DDCFE006858AC /* FastFastFastMemoWidgetLiveActivity.swift in Sources */,
 				46AD568F295DDCFE006858AC /* FastFastFastMemoWidgetBundle.swift in Sources */,
-				46AD5693295DDCFE006858AC /* FastFastFastMemoWidget.swift in Sources */,
+				46AD56AC295DE7E1006858AC /* FastFastFastMemoWidgetEntryView.swift in Sources */,
+				46AD56A2295DDDE5006858AC /* LocalDatabase.swift in Sources */,
+				46AD56A7295DDED8006858AC /* FastFastFastMemoLockScreenWidget.swift in Sources */,
+				46AD56A8295DE6EF006858AC /* MemoEntity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -667,6 +634,7 @@
 				INFOPLIST_FILE = FastFastFastMemoWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = FastFastFastMemoWidget;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -695,6 +663,7 @@
 				INFOPLIST_FILE = FastFastFastMemoWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = FastFastFastMemoWidget;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -755,6 +724,11 @@
 
 /* Begin XCSwiftPackageProductDependency section */
 		46AD5644295DA8BD006858AC /* GRDB */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 46AD5643295DA8BD006858AC /* XCRemoteSwiftPackageReference "GRDB.swift" */;
+			productName = GRDB;
+		};
+		46AD56A0295DDDDB006858AC /* GRDB */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 46AD5643295DA8BD006858AC /* XCRemoteSwiftPackageReference "GRDB.swift" */;
 			productName = GRDB;

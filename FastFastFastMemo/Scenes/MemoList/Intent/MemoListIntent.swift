@@ -1,4 +1,5 @@
 import Foundation
+import GRDB
 
 final class MemoListIntent: MemoListIntentProtocol {
     private let database = LocalDatabase.shared
@@ -11,7 +12,10 @@ final class MemoListIntent: MemoListIntentProtocol {
     }
 
     func onAppear() {
-        guard let memoList = try? database.readRecords(as: MemoEntity.self) else { return }
+        guard let memoList = try? database.readRecords(
+            as: MemoEntity.self,
+            ordered: [Column("createdAt").desc]
+        ) else { return }
         model?.updateMemoList(memoList: memoList)
     }
 
@@ -35,7 +39,10 @@ final class MemoListIntent: MemoListIntentProtocol {
             createdAt: Date()
         )
         try? database.save(record: memo)
-        guard let memoList = try? database.readRecords(as: MemoEntity.self) else { return }
+        guard let memoList = try? database.readRecords(
+            as: MemoEntity.self,
+            ordered: [Column("createdAt").desc]
+        ) else { return }
         model?.updateMemoList(memoList: memoList)
         model?.submitNewMemo()
         model?.toggleNewMemo(toggle: false)

@@ -11,7 +11,6 @@ import SwiftUI
 
 struct FastFastFastMemoWidgetAttributes: ActivityAttributes {
     public struct ContentState: Codable, Hashable {
-        // Dynamic stateful properties about your activity go here!
         var value: Int
     }
 
@@ -19,6 +18,7 @@ struct FastFastFastMemoWidgetAttributes: ActivityAttributes {
     var name: String
 }
 
+@available(iOSApplicationExtension 16.1, *)
 struct FastFastFastMemoWidgetLiveActivity: Widget {
     var body: some WidgetConfiguration {
         ActivityConfiguration(for: FastFastFastMemoWidgetAttributes.self) { context in
