@@ -72,6 +72,17 @@ struct MemoListView: View {
             .onAppear(perform: intent.onAppear)
             .navigationTitle("메모")
         }
+        .onOpenURL { url in
+            guard let components = URLComponents(url: url, resolvingAgainstBaseURL: false) else {
+                return
+            }
+            let parser = MemoListDeepLinkParser {
+                intent.toggleNewMemo(toggle: true)
+            }
+
+            guard parser.canHandleDeepLink(components) else { return }
+            parser.handleDeepLink(components)
+        }
     }
 
     @ViewBuilder

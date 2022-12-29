@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		46AD5634295DA820006858AC /* FastFastFastMemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD5633295DA820006858AC /* FastFastFastMemoApp.swift */; };
-		46AD5636295DA820006858AC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD5635295DA820006858AC /* ContentView.swift */; };
 		46AD5638295DA822006858AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46AD5637295DA822006858AC /* Assets.xcassets */; };
 		46AD563B295DA822006858AC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46AD563A295DA822006858AC /* Preview Assets.xcassets */; };
 		46AD5645295DA8BD006858AC /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = 46AD5644295DA8BD006858AC /* GRDB */; };
@@ -45,6 +44,8 @@
 		46AD56C0295DFE43006858AC /* MemoLockerView+build.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD56BF295DFE43006858AC /* MemoLockerView+build.swift */; };
 		46AD56C3295DFEF5006858AC /* MemoType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD56C2295DFEF5006858AC /* MemoType.swift */; };
 		46AD56C4295DFFA3006858AC /* MemoType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD56C2295DFEF5006858AC /* MemoType.swift */; };
+		46AD56CA295E555F006858AC /* DeepLinkParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD56C9295E555F006858AC /* DeepLinkParser.swift */; };
+		46AD56CD295E573D006858AC /* MemoListDeepLinkParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD56CC295E573D006858AC /* MemoListDeepLinkParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,7 +75,6 @@
 /* Begin PBXFileReference section */
 		46AD5630295DA820006858AC /* FastFastFastMemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FastFastFastMemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46AD5633295DA820006858AC /* FastFastFastMemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastFastFastMemoApp.swift; sourceTree = "<group>"; };
-		46AD5635295DA820006858AC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		46AD5637295DA822006858AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		46AD563A295DA822006858AC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		46AD5647295DA8F9006858AC /* LocalDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDatabase.swift; sourceTree = "<group>"; };
@@ -108,6 +108,8 @@
 		46AD56BF295DFE43006858AC /* MemoLockerView+build.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MemoLockerView+build.swift"; sourceTree = "<group>"; };
 		46AD56C2295DFEF5006858AC /* MemoType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoType.swift; sourceTree = "<group>"; };
 		46AD56C5295E5440006858AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		46AD56C9295E555F006858AC /* DeepLinkParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinkParser.swift; sourceTree = "<group>"; };
+		46AD56CC295E573D006858AC /* MemoListDeepLinkParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListDeepLinkParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,7 +164,6 @@
 				46AD5649295DAD32006858AC /* Utilities */,
 				46AD5646295DA8EA006858AC /* Database */,
 				46AD5633295DA820006858AC /* FastFastFastMemoApp.swift */,
-				46AD5635295DA820006858AC /* ContentView.swift */,
 				46AD5637295DA822006858AC /* Assets.xcassets */,
 				46AD5639295DA822006858AC /* Preview Content */,
 			);
@@ -188,6 +189,7 @@
 		46AD5649295DAD32006858AC /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				46AD56C8295E5558006858AC /* DeepLink */,
 				46AD56C1295DFEF0006858AC /* Enum */,
 				46AD5680295DDAC5006858AC /* Extensions */,
 				46AD567D295DC836006858AC /* Components */,
@@ -233,6 +235,7 @@
 		46AD5658295DB11A006858AC /* MemoList */ = {
 			isa = PBXGroup;
 			children = (
+				46AD56CB295E56E9006858AC /* DeepLink */,
 				46AD5663295DB4DB006858AC /* View */,
 				46AD565E295DB1D7006858AC /* Model */,
 				46AD5659295DB13E006858AC /* Intent */,
@@ -358,6 +361,22 @@
 			path = Enum;
 			sourceTree = "<group>";
 		};
+		46AD56C8295E5558006858AC /* DeepLink */ = {
+			isa = PBXGroup;
+			children = (
+				46AD56C9295E555F006858AC /* DeepLinkParser.swift */,
+			);
+			path = DeepLink;
+			sourceTree = "<group>";
+		};
+		46AD56CB295E56E9006858AC /* DeepLink */ = {
+			isa = PBXGroup;
+			children = (
+				46AD56CC295E573D006858AC /* MemoListDeepLinkParser.swift */,
+			);
+			path = DeepLink;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -474,7 +493,7 @@
 				46AD567F295DC83C006858AC /* DeferView.swift in Sources */,
 				46AD565D295DB175006858AC /* MemoListIntent.swift in Sources */,
 				46AD5648295DA8F9006858AC /* LocalDatabase.swift in Sources */,
-				46AD5636295DA820006858AC /* ContentView.swift in Sources */,
+				46AD56CA295E555F006858AC /* DeepLinkParser.swift in Sources */,
 				46AD5654295DAEAE006858AC /* MemoListView.swift in Sources */,
 				46AD565B295DB143006858AC /* MemoListIntentProtocol.swift in Sources */,
 				46AD5657295DB08E006858AC /* MVIContainer.swift in Sources */,
@@ -486,6 +505,7 @@
 				46AD5660295DB1DD006858AC /* MemoListModelProtocol.swift in Sources */,
 				46AD5634295DA820006858AC /* FastFastFastMemoApp.swift in Sources */,
 				46AD56C3295DFEF5006858AC /* MemoType.swift in Sources */,
+				46AD56CD295E573D006858AC /* MemoListDeepLinkParser.swift in Sources */,
 				46AD564C295DAD3E006858AC /* AppGroup.swift in Sources */,
 				46AD56BE295DFE19006858AC /* MemoLockerIntent.swift in Sources */,
 				46AD5665295DB4E9006858AC /* MemoListView+build.swift in Sources */,

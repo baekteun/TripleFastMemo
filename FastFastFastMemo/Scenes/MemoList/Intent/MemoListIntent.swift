@@ -33,6 +33,7 @@ final class MemoListIntent: MemoListIntentProtocol {
     }
 
     func submitNewMemo(content: String) {
+        guard !content.isEmpty else { return }
         let memo = MemoEntity(
             id: UUID().uuidString,
             content: content,
