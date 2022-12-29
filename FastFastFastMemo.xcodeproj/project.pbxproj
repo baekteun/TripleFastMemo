@@ -28,6 +28,7 @@
 		46AD5678295DB989006858AC /* NewMemoIntentProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD5677295DB989006858AC /* NewMemoIntentProtocol.swift */; };
 		46AD567A295DB99D006858AC /* NewMemoIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD5679295DB99D006858AC /* NewMemoIntent.swift */; };
 		46AD567C295DB9C6006858AC /* NewMemoView+build.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD567B295DB9C6006858AC /* NewMemoView+build.swift */; };
+		46AD567F295DC83C006858AC /* DeferView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD567E295DC83C006858AC /* DeferView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		46AD5677295DB989006858AC /* NewMemoIntentProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMemoIntentProtocol.swift; sourceTree = "<group>"; };
 		46AD5679295DB99D006858AC /* NewMemoIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMemoIntent.swift; sourceTree = "<group>"; };
 		46AD567B295DB9C6006858AC /* NewMemoView+build.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewMemoView+build.swift"; sourceTree = "<group>"; };
+		46AD567E295DC83C006858AC /* DeferView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeferView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 		46AD5649295DAD32006858AC /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				46AD567D295DC836006858AC /* Components */,
 				46AD5655295DB085006858AC /* MVI */,
 				46AD564A295DAD35006858AC /* AppGroup */,
 			);
@@ -231,6 +234,14 @@
 			path = Intent;
 			sourceTree = "<group>";
 		};
+		46AD567D295DC836006858AC /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				46AD567E295DC83C006858AC /* DeferView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -309,6 +320,7 @@
 			files = (
 				46AD5673295DB94E006858AC /* NewMemoModelProtocol.swift in Sources */,
 				46AD5670295DB939006858AC /* NewMemoView.swift in Sources */,
+				46AD567F295DC83C006858AC /* DeferView.swift in Sources */,
 				46AD5678295DB989006858AC /* NewMemoIntentProtocol.swift in Sources */,
 				46AD565D295DB175006858AC /* MemoListIntent.swift in Sources */,
 				46AD5648295DA8F9006858AC /* LocalDatabase.swift in Sources */,

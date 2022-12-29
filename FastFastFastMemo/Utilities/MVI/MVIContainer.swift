@@ -3,7 +3,7 @@ import SwiftUI
 
 final class MVIContainer<Intent, Model>: ObservableObject {
     let intent: Intent
-    let model: Model
+    @Published var model: Model
 
     private var bag = Set<AnyCancellable>()
 

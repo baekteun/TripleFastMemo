@@ -6,6 +6,30 @@ struct NewMemoView: View {
     private var state: any NewMemoStateProtocol { container.model }
 
     var body: some View {
-        Text("Hello, World!")
+        VStack {
+            TextEditor(text: Binding(
+                get: { state.content }, set: intent.contentChanged(content:)
+            ))
+            .overlay {
+                RoundedRectangle(cornerRadius: 4)
+                    .stroke(Color.black)
+            }
+            .padding(4)
+
+            Button {
+                
+            } label: {
+                Text("저장")
+                    .foregroundColor(.white)
+            }
+            .frame(maxWidth: .infinity)
+            .frame(height: 54)
+            .background {
+                RoundedRectangle(cornerRadius: 4)
+                    .fill(Color.black)
+            }
+            .padding(4)
+        }
+        .navigationBarTitleDisplayMode(.inline)
     }
 }

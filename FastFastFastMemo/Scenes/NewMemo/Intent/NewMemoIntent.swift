@@ -10,5 +10,7 @@ final class NewMemoIntent: NewMemoIntentProtocol {
         self.model = model
     }
 
-    
+    func contentChanged(content: String) {
+        model?.contentChanged(content: content)
+    }
 }

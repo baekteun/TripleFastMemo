@@ -10,7 +10,9 @@ struct MemoListView: View {
             ZStack {
                 ScrollView {
                     LazyVStack {
-                        
+                        ForEach(state.memoList, id: \.id) { memo in
+                            memoRowView(memo: memo)
+                        }
                     }
                 }
 
@@ -21,7 +23,9 @@ struct MemoListView: View {
                         Spacer()
 
                         NavigationLink {
-                            NewMemoView.build()
+                            DeferView {
+                                NewMemoView.build()
+                            }
                         } label: {
                             memoFABButton()
                         }
@@ -29,6 +33,7 @@ struct MemoListView: View {
                 }
             }
             .onAppear(perform: intent.onAppear)
+            .navigationTitle("메모")
         }
     }
 
