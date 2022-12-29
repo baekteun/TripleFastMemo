@@ -52,7 +52,7 @@ struct MemoListView: View {
     @ViewBuilder
     func memoRowView(memo: MemoEntity) -> some View {
         HStack {
-            
+            Text(memo.content)
         }
     }
 }

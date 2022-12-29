@@ -13,4 +13,8 @@ final class NewMemoIntent: NewMemoIntentProtocol {
     func contentChanged(content: String) {
         model?.contentChanged(content: content)
     }
+
+    func saveButtonDidTap() {
+        model?.saveButtonDidTap()
+    }
 }

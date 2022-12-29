@@ -7,10 +7,10 @@ public struct LocalDatabase {
         migrator.eraseDatabaseOnSchemaChange = true
 #endif
         migrator.registerMigration("v1.0.0") { db in
-            try db.create(table: "memo") { t in
+            try db.create(table: "memoEntity") { t in
                 t.column("id", .text).primaryKey(onConflict: .replace).notNull()
                 t.column("content", .text)
-                t.column("startAt", .date)
+                t.column("createdAt", .date)
             }
         }
     }
