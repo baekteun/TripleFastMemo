@@ -29,6 +29,7 @@
 		46AD567A295DB99D006858AC /* NewMemoIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD5679295DB99D006858AC /* NewMemoIntent.swift */; };
 		46AD567C295DB9C6006858AC /* NewMemoView+build.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD567B295DB9C6006858AC /* NewMemoView+build.swift */; };
 		46AD567F295DC83C006858AC /* DeferView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD567E295DC83C006858AC /* DeferView.swift */; };
+		46AD5682295DDACE006858AC /* DateUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD5681295DDACE006858AC /* DateUtil.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		46AD5679295DB99D006858AC /* NewMemoIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMemoIntent.swift; sourceTree = "<group>"; };
 		46AD567B295DB9C6006858AC /* NewMemoView+build.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewMemoView+build.swift"; sourceTree = "<group>"; };
 		46AD567E295DC83C006858AC /* DeferView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeferView.swift; sourceTree = "<group>"; };
+		46AD5681295DDACE006858AC /* DateUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtil.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 		46AD5649295DAD32006858AC /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				46AD5680295DDAC5006858AC /* Extensions */,
 				46AD567D295DC836006858AC /* Components */,
 				46AD5655295DB085006858AC /* MVI */,
 				46AD564A295DAD35006858AC /* AppGroup */,
@@ -242,6 +245,14 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		46AD5680295DDAC5006858AC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				46AD5681295DDACE006858AC /* DateUtil.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -319,6 +330,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46AD5673295DB94E006858AC /* NewMemoModelProtocol.swift in Sources */,
+				46AD5682295DDACE006858AC /* DateUtil.swift in Sources */,
 				46AD5670295DB939006858AC /* NewMemoView.swift in Sources */,
 				46AD567F295DC83C006858AC /* DeferView.swift in Sources */,
 				46AD5678295DB989006858AC /* NewMemoIntentProtocol.swift in Sources */,
