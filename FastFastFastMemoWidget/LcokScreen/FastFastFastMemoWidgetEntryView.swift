@@ -22,6 +22,9 @@ struct FastFastFastMemoWidgetEntryView: View {
         case .systemMedium:
             FFFMemoMediumWidgetView(entry: entry)
 
+        case .systemLarge:
+            FFFMemoLargeWidgetView(entry: entry)
+
         case .accessoryCircular:
             FFFMemoAccessoryCircularView()
 
@@ -68,6 +71,29 @@ private struct FFFMemoMediumWidgetView: View {
                         .font(.caption)
                         .foregroundColor(.gray)
                 }
+            }
+        }
+        .padding(12)
+    }
+}
+
+private struct FFFMemoLargeWidgetView: View {
+    let entry: FastFastFastMemoLockScreenTimelineProvider.Entry
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 0) {
+            ForEach(Array(entry.memos.prefix(12)), id: \.id) { memo in
+                HStack {
+                    Text(memo.content)
+                        .font(.callout)
+
+                    Spacer()
+
+                    Text(memo.createdAt.custom("a hh시 mm분 ss초"))
+                        .font(.caption)
+                        .foregroundColor(.gray)
+                }
+                .frame(maxHeight: .infinity)
             }
         }
         .padding(12)
