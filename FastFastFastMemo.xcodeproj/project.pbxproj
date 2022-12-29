@@ -30,7 +30,38 @@
 		46AD567C295DB9C6006858AC /* NewMemoView+build.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD567B295DB9C6006858AC /* NewMemoView+build.swift */; };
 		46AD567F295DC83C006858AC /* DeferView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD567E295DC83C006858AC /* DeferView.swift */; };
 		46AD5682295DDACE006858AC /* DateUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD5681295DDACE006858AC /* DateUtil.swift */; };
+		46AD568A295DDCFE006858AC /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46AD5689295DDCFE006858AC /* WidgetKit.framework */; };
+		46AD568C295DDCFE006858AC /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46AD568B295DDCFE006858AC /* SwiftUI.framework */; };
+		46AD568F295DDCFE006858AC /* FastFastFastMemoWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD568E295DDCFE006858AC /* FastFastFastMemoWidgetBundle.swift */; };
+		46AD5691295DDCFE006858AC /* FastFastFastMemoWidgetLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD5690295DDCFE006858AC /* FastFastFastMemoWidgetLiveActivity.swift */; };
+		46AD5693295DDCFE006858AC /* FastFastFastMemoWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD5692295DDCFE006858AC /* FastFastFastMemoWidget.swift */; };
+		46AD5695295DDD00006858AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46AD5694295DDD00006858AC /* Assets.xcassets */; };
+		46AD5699295DDD00006858AC /* FastFastFastMemoWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 46AD5687295DDCFE006858AC /* FastFastFastMemoWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		46AD5697295DDD00006858AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46AD5628295DA820006858AC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 46AD5686295DDCFE006858AC;
+			remoteInfo = FastFastFastMemoWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		46AD569D295DDD00006858AC /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				46AD5699295DDD00006858AC /* FastFastFastMemoWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		46AD5630295DA820006858AC /* FastFastFastMemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FastFastFastMemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,6 +88,15 @@
 		46AD567B295DB9C6006858AC /* NewMemoView+build.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewMemoView+build.swift"; sourceTree = "<group>"; };
 		46AD567E295DC83C006858AC /* DeferView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeferView.swift; sourceTree = "<group>"; };
 		46AD5681295DDACE006858AC /* DateUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtil.swift; sourceTree = "<group>"; };
+		46AD5687295DDCFE006858AC /* FastFastFastMemoWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = FastFastFastMemoWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		46AD5689295DDCFE006858AC /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		46AD568B295DDCFE006858AC /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		46AD568E295DDCFE006858AC /* FastFastFastMemoWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastFastFastMemoWidgetBundle.swift; sourceTree = "<group>"; };
+		46AD5690295DDCFE006858AC /* FastFastFastMemoWidgetLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastFastFastMemoWidgetLiveActivity.swift; sourceTree = "<group>"; };
+		46AD5692295DDCFE006858AC /* FastFastFastMemoWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastFastFastMemoWidget.swift; sourceTree = "<group>"; };
+		46AD5694295DDD00006858AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		46AD5696295DDD00006858AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		46AD569E295DDD11006858AC /* FastFastFastMemoWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FastFastFastMemoWidgetExtension.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,13 +108,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		46AD5684295DDCFE006858AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46AD568C295DDCFE006858AC /* SwiftUI.framework in Frameworks */,
+				46AD568A295DDCFE006858AC /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		46AD5627295DA820006858AC = {
 			isa = PBXGroup;
 			children = (
+				46AD569E295DDD11006858AC /* FastFastFastMemoWidgetExtension.entitlements */,
 				46AD5632295DA820006858AC /* FastFastFastMemo */,
+				46AD568D295DDCFE006858AC /* FastFastFastMemoWidget */,
+				46AD5688295DDCFE006858AC /* Frameworks */,
 				46AD5631295DA820006858AC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -83,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				46AD5630295DA820006858AC /* FastFastFastMemo.app */,
+				46AD5687295DDCFE006858AC /* FastFastFastMemoWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -253,6 +306,27 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		46AD5688295DDCFE006858AC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				46AD5689295DDCFE006858AC /* WidgetKit.framework */,
+				46AD568B295DDCFE006858AC /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		46AD568D295DDCFE006858AC /* FastFastFastMemoWidget */ = {
+			isa = PBXGroup;
+			children = (
+				46AD568E295DDCFE006858AC /* FastFastFastMemoWidgetBundle.swift */,
+				46AD5690295DDCFE006858AC /* FastFastFastMemoWidgetLiveActivity.swift */,
+				46AD5692295DDCFE006858AC /* FastFastFastMemoWidget.swift */,
+				46AD5694295DDD00006858AC /* Assets.xcassets */,
+				46AD5696295DDD00006858AC /* Info.plist */,
+			);
+			path = FastFastFastMemoWidget;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -263,10 +337,12 @@
 				46AD562C295DA820006858AC /* Sources */,
 				46AD562D295DA820006858AC /* Frameworks */,
 				46AD562E295DA820006858AC /* Resources */,
+				46AD569D295DDD00006858AC /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				46AD5698295DDD00006858AC /* PBXTargetDependency */,
 			);
 			name = FastFastFastMemo;
 			packageProductDependencies = (
@@ -275,6 +351,23 @@
 			productName = FastFastFastMemo;
 			productReference = 46AD5630295DA820006858AC /* FastFastFastMemo.app */;
 			productType = "com.apple.product-type.application";
+		};
+		46AD5686295DDCFE006858AC /* FastFastFastMemoWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 46AD569A295DDD00006858AC /* Build configuration list for PBXNativeTarget "FastFastFastMemoWidgetExtension" */;
+			buildPhases = (
+				46AD5683295DDCFE006858AC /* Sources */,
+				46AD5684295DDCFE006858AC /* Frameworks */,
+				46AD5685295DDCFE006858AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FastFastFastMemoWidgetExtension;
+			productName = FastFastFastMemoWidgetExtension;
+			productReference = 46AD5687295DDCFE006858AC /* FastFastFastMemoWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -287,6 +380,9 @@
 				LastUpgradeCheck = 1410;
 				TargetAttributes = {
 					46AD562F295DA820006858AC = {
+						CreatedOnToolsVersion = 14.1;
+					};
+					46AD5686295DDCFE006858AC = {
 						CreatedOnToolsVersion = 14.1;
 					};
 				};
@@ -308,6 +404,7 @@
 			projectRoot = "";
 			targets = (
 				46AD562F295DA820006858AC /* FastFastFastMemo */,
+				46AD5686295DDCFE006858AC /* FastFastFastMemoWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -319,6 +416,14 @@
 			files = (
 				46AD563B295DA822006858AC /* Preview Assets.xcassets in Resources */,
 				46AD5638295DA822006858AC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46AD5685295DDCFE006858AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46AD5695295DDD00006858AC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,7 +457,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		46AD5683295DDCFE006858AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46AD5691295DDCFE006858AC /* FastFastFastMemoWidgetLiveActivity.swift in Sources */,
+				46AD568F295DDCFE006858AC /* FastFastFastMemoWidgetBundle.swift in Sources */,
+				46AD5693295DDCFE006858AC /* FastFastFastMemoWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		46AD5698295DDD00006858AC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 46AD5686295DDCFE006858AC /* FastFastFastMemoWidgetExtension */;
+			targetProxy = 46AD5697295DDD00006858AC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		46AD563C295DA822006858AC /* Debug */ = {
@@ -472,6 +595,7 @@
 		46AD563F295DA822006858AC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = FastFastFastMemo/FastFastFastMemo.entitlements;
@@ -502,6 +626,7 @@
 		46AD5640295DA822006858AC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = FastFastFastMemo/FastFastFastMemo.entitlements;
@@ -529,6 +654,62 @@
 			};
 			name = Release;
 		};
+		46AD569B295DDD00006858AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = FastFastFastMemoWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 235C2RVZ7L;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FastFastFastMemoWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = FastFastFastMemoWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = baegteun.FastFastFastMemo.FastFastFastMemoWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		46AD569C295DDD00006858AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = FastFastFastMemoWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 235C2RVZ7L;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FastFastFastMemoWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = FastFastFastMemoWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = baegteun.FastFastFastMemo.FastFastFastMemoWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -546,6 +727,15 @@
 			buildConfigurations = (
 				46AD563F295DA822006858AC /* Debug */,
 				46AD5640295DA822006858AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		46AD569A295DDD00006858AC /* Build configuration list for PBXNativeTarget "FastFastFastMemoWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46AD569B295DDD00006858AC /* Debug */,
+				46AD569C295DDD00006858AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
