@@ -46,6 +46,7 @@
 		46AD56C4295DFFA3006858AC /* MemoType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD56C2295DFEF5006858AC /* MemoType.swift */; };
 		46AD56CA295E555F006858AC /* DeepLinkParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD56C9295E555F006858AC /* DeepLinkParser.swift */; };
 		46AD56CD295E573D006858AC /* MemoListDeepLinkParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD56CC295E573D006858AC /* MemoListDeepLinkParser.swift */; };
+		46AD56D2295E5C16006858AC /* MemoRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD56D1295E5C16006858AC /* MemoRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +111,7 @@
 		46AD56C5295E5440006858AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		46AD56C9295E555F006858AC /* DeepLinkParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinkParser.swift; sourceTree = "<group>"; };
 		46AD56CC295E573D006858AC /* MemoListDeepLinkParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListDeepLinkParser.swift; sourceTree = "<group>"; };
+		46AD56D1295E5C16006858AC /* MemoRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -273,6 +275,7 @@
 		46AD567D295DC836006858AC /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				46AD56D0295E5C12006858AC /* Memo */,
 				46AD567E295DC83C006858AC /* DeferView.swift */,
 			);
 			path = Components;
@@ -375,6 +378,14 @@
 				46AD56CC295E573D006858AC /* MemoListDeepLinkParser.swift */,
 			);
 			path = DeepLink;
+			sourceTree = "<group>";
+		};
+		46AD56D0295E5C12006858AC /* Memo */ = {
+			isa = PBXGroup;
+			children = (
+				46AD56D1295E5C16006858AC /* MemoRowView.swift */,
+			);
+			path = Memo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -509,6 +520,7 @@
 				46AD564C295DAD3E006858AC /* AppGroup.swift in Sources */,
 				46AD56BE295DFE19006858AC /* MemoLockerIntent.swift in Sources */,
 				46AD5665295DB4E9006858AC /* MemoListView+build.swift in Sources */,
+				46AD56D2295E5C16006858AC /* MemoRowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -667,6 +679,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FastFastFastMemo/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "매우매우매우 빠른 메모";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -699,6 +712,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FastFastFastMemo/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "매우매우매우 빠른 메모";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

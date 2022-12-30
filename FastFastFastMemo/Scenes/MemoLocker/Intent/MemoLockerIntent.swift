@@ -8,4 +8,12 @@ final class MemoLockerIntent: MemoLockerIntentProtocol {
     ) {
         self.model = model
     }
+
+    func onAppear() {
+        model?.onAppear()
+    }
+
+    func onDelete(id: String) {
+        model?.onDelete(id: id)
+    }
 }

@@ -33,7 +33,7 @@ struct MemoListView: View {
                     }
 
                     List(state.memoList, id: \.id) { memo in
-                        memoRowView(memo: memo)
+                        MemoRowView(memo: memo)
                             .swipeActions(edge: .trailing, allowsFullSwipe: true) {
                                 Button("삭제") {
                                     withAnimation {
@@ -43,7 +43,9 @@ struct MemoListView: View {
                                 .tint(.red)
 
                                 Button("보관") {
-                                    
+                                    withAnimation {
+                                        intent.onBoxingMemo(id: memo.id)
+                                    }
                                 }
                                 .tint(.gray)
                             }
@@ -62,15 +64,23 @@ struct MemoListView: View {
                         memoFABButton {
                             if state.isOnNewMemo {
                                 intent.submitNewMemo(content: state.newText)
-                            } else {
-                                intent.toggleNewMemo(toggle: !state.isOnNewMemo)
                             }
+                            intent.toggleNewMemo(toggle: !state.isOnNewMemo)
                         }
                     }
                 }
             }
             .onAppear(perform: intent.onAppear)
             .navigationTitle("메모")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    NavigationLink {
+                        MemoLockerView.build()
+                    } label: {
+                        Text("보관함")
+                    }
+                }
+            }
         }
         .onOpenURL { url in
             guard let components = URLComponents(url: url, resolvingAgainstBaseURL: false) else {
@@ -96,28 +106,6 @@ struct MemoListView: View {
                 }
                 .clipShape(Circle())
                 .padding(24)
-        }
-    }
-
-    @ViewBuilder
-    func memoRowView(memo: MemoEntity) -> some View {
-        HStack {
-            VStack(alignment: .leading, spacing: 0) {
-                Text(memo.content)
-                    .lineLimit(nil)
-
-                Text(memo.createdAt.custom("a hh시 mm분 ss초"))
-                    .font(.caption)
-                    .foregroundColor(.gray)
-            }
-
-            Spacer()
-        }
-        .frame(maxWidth: .infinity)
-        .padding(4)
-        .overlay {
-            RoundedRectangle(cornerRadius: 4)
-                .stroke(Color.black)
         }
     }
 }

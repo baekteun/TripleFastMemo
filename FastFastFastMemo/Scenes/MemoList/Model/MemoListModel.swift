@@ -19,6 +19,10 @@ extension MemoListModel: MemoListActionProtocol {
         self.memoList.removeAll { $0.id == id }
     }
 
+    func onBoxingMemo(id: String) {
+        self.memoList.removeAll { $0.id == id }
+    }
+
     func newTextChanged(new: String) {
         newText = new
     }

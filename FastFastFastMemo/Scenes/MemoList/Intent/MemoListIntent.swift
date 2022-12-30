@@ -12,16 +12,25 @@ final class MemoListIntent: MemoListIntentProtocol {
     }
 
     func onAppear() {
-        guard let memoList = try? database.readRecords(
-            as: MemoEntity.self,
-            ordered: [Column("createdAt").desc]
-        ) else { return }
-        model?.updateMemoList(memoList: memoList)
+        let memoList = try? database.readRecords(as: MemoEntity.self, query: { memo, db in
+            try memo.filter(Column("memoType") == MemoType.publish.rawValue)
+                .order([Column("createdAt").desc])
+                .fetchAll(db)
+        })
+
+        model?.updateMemoList(memoList: memoList ?? [])
     }
 
     func onDeleteMemo(id: String) {
         try? database.delete(record: MemoEntity.self, key: id)
         model?.removeMemo(id: id)
+    }
+
+    func onBoxingMemo(id: String) {
+        try? database.updateRecord(record: MemoEntity.self, at: id) { memo in
+            memo = .init(id: memo.id, content: memo.content, createdAt: memo.createdAt, memoType: .boxing)
+        }
+        model?.onBoxingMemo(id: id)
     }
 
     func toggleNewMemo(toggle: Bool) {
@@ -41,10 +50,11 @@ final class MemoListIntent: MemoListIntentProtocol {
             memoType: .publish
         )
         try? database.save(record: memo)
-        guard let memoList = try? database.readRecords(
-            as: MemoEntity.self,
-            ordered: [Column("createdAt").desc]
-        ) else { return }
+        guard let memoList = try? database.readRecords(as: MemoEntity.self, query: { memo, db in
+            try memo.filter(Column("memoType") == MemoType.publish.rawValue)
+                .order([Column("createdAt").desc])
+                .fetchAll(db)
+        }) else { return }
         model?.updateMemoList(memoList: memoList)
         model?.submitNewMemo()
         model?.toggleNewMemo(toggle: false)

@@ -43,10 +43,10 @@ public struct LocalDatabase {
 
     public func readRecords<Record: FetchableRecord & PersistableRecord>(
         as record: Record.Type,
-        query: (Record.Type) throws -> [Record]
+        query: (Record.Type, Database) throws -> [Record]
     ) throws -> [Record] {
         try dbQueue.write { db in
-            try query(record)
+            try query(record, db)
         }
     }
 
@@ -61,10 +61,10 @@ public struct LocalDatabase {
 
     public func readRecord<Record: FetchableRecord & PersistableRecord>(
         as record: Record.Type,
-        query: (Record.Type) throws -> Record
+        query: (Record.Type, Database) throws -> Record
     ) throws -> Record {
         try dbQueue.write { db in
-            try query(record)
+            try query(record, db)
         }
     }
 
