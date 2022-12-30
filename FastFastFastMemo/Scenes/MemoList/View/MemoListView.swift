@@ -6,10 +6,8 @@ struct MemoListView: View {
     private var intent: any MemoListIntentProtocol { container.intent }
     private var state: any MemoListStateProtocol { container.model }
     
-    @State var xOffset: Int = 0
-    @State var yOffset: Int = 0
-//    @AppStorage(UserDefaultsKeys.x.rawValue, store: .standard) var xOffset: Int = 0
-//    @AppStorage(UserDefaultsKeys.y.rawValue, store: .standard) var yOffset: Int = 0
+    @AppStorage(UserDefaultsKeys.x.rawValue, store: .standard) var xOffset: Int = 0
+    @AppStorage(UserDefaultsKeys.y.rawValue, store: .standard) var yOffset: Int = 0
     
     var body: some View {
         NavigationStack {
