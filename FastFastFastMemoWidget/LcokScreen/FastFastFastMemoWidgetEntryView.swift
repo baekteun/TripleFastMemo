@@ -41,19 +41,17 @@ private struct FFFMemoSmallWidgetView: View {
     let entry: FastFastFastMemoLockScreenTimelineProvider.Entry
 
     var body: some View {
-        Link(destination: URL(string: "fff-memo://write") ?? .init(string: "https://www.google.com")!) {
-            VStack(alignment: .leading, spacing: 0) {
-                ForEach(Array(entry.memos.prefix(7)), id: \.id) { memo in
-                    HStack {
-                        Text(memo.content)
-                            .font(.callout)
+        VStack(alignment: .leading, spacing: 0) {
+            ForEach(Array(entry.memos.prefix(7)), id: \.id) { memo in
+                HStack {
+                    Text(memo.content)
+                        .font(.callout)
 
-                        Spacer()
-                    }
+                    Spacer()
                 }
             }
-            .padding(12)
         }
+        .padding(12)
     }
 }
 
@@ -61,23 +59,21 @@ private struct FFFMemoMediumWidgetView: View {
     let entry: FastFastFastMemoLockScreenTimelineProvider.Entry
 
     var body: some View {
-        Link(destination: URL(string: "fff-memo://write") ?? .init(string: "https://www.google.com")!) {
-            VStack(alignment: .leading, spacing: 0) {
-                ForEach(Array(entry.memos.prefix(7)), id: \.id) { memo in
-                    HStack {
-                        Text(memo.content)
-                            .font(.callout)
+        VStack(alignment: .leading, spacing: 0) {
+            ForEach(Array(entry.memos.prefix(7)), id: \.id) { memo in
+                HStack {
+                    Text(memo.content)
+                        .font(.callout)
 
-                        Spacer()
+                    Spacer()
 
-                        Text(memo.createdAt.custom("a hh시 mm분 ss초"))
-                            .font(.caption)
-                            .foregroundColor(.gray)
-                    }
+                    Text(memo.createdAt.custom("a hh시 mm분 ss초"))
+                        .font(.caption)
+                        .foregroundColor(.gray)
                 }
             }
-            .padding(12)
         }
+        .padding(12)
     }
 }
 
@@ -85,36 +81,32 @@ private struct FFFMemoLargeWidgetView: View {
     let entry: FastFastFastMemoLockScreenTimelineProvider.Entry
 
     var body: some View {
-        Link(destination: URL(string: "fff-memo://write") ?? .init(string: "https://www.google.com")!) {
-            VStack(alignment: .leading, spacing: 0) {
-                ForEach(Array(entry.memos.prefix(12)), id: \.id) { memo in
-                    HStack {
-                        Text(memo.content)
-                            .font(.callout)
+        VStack(alignment: .leading, spacing: 0) {
+            ForEach(Array(entry.memos.prefix(12)), id: \.id) { memo in
+                HStack {
+                    Text(memo.content)
+                        .font(.callout)
 
-                        Spacer()
+                    Spacer()
 
-                        Text(memo.createdAt.custom("a hh시 mm분 ss초"))
-                            .font(.caption)
-                            .foregroundColor(.gray)
-                    }
-                    .frame(maxHeight: .infinity)
+                    Text(memo.createdAt.custom("a hh시 mm분 ss초"))
+                        .font(.caption)
+                        .foregroundColor(.gray)
                 }
+                .frame(maxHeight: .infinity)
             }
-            .padding(12)
         }
+        .padding(12)
     }
 }
 
 private struct FFFMemoAccessoryCircularView: View {
     var body: some View {
-        Link(destination: URL(string: "fff-memo://write") ?? .init(string: "https://www.google.com")!) {
-            Image(systemName: "square.and.pencil.circle.fill")
-                .resizable()
-                .frame(width: 66, height: 66)
-                .clipShape(Circle())
-                .foregroundColor(.gray)
-        }
+        Image(systemName: "square.and.pencil.circle.fill")
+            .resizable()
+            .frame(width: 66, height: 66)
+            .clipShape(Circle())
+            .foregroundColor(.gray)
     }
 }
 
@@ -122,23 +114,21 @@ private struct FFFMemoAccessoryRectangular: View {
     let entry: FastFastFastMemoLockScreenTimelineProvider.Entry
 
     var body: some View {
-        Link(destination: URL(string: "fff-memo://write") ?? .init(string: "https://www.google.com")!) {
-            VStack(alignment: .leading, spacing: 0) {
-                ForEach(Array(entry.memos.prefix(3)), id: \.id) { memo in
-                    HStack {
-                        Text(memo.content)
-                            .foregroundColor(.gray)
+        VStack(alignment: .leading, spacing: 0) {
+            ForEach(Array(entry.memos.prefix(3)), id: \.id) { memo in
+                HStack {
+                    Text(memo.content)
+                        .foregroundColor(.gray)
 
-                        Spacer()
-                    }
+                    Spacer()
                 }
             }
-            .padding(4)
-            .frame(maxWidth: .infinity)
-            .background {
-                RoundedRectangle(cornerRadius: 8)
-                    .fill(Color.gray.opacity(0.3))
-            }
+        }
+        .padding(4)
+        .frame(maxWidth: .infinity)
+        .background {
+            RoundedRectangle(cornerRadius: 8)
+                .fill(Color.gray.opacity(0.3))
         }
     }
 }

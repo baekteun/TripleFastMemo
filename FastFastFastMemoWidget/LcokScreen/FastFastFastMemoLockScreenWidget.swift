@@ -44,6 +44,7 @@ struct FastFastFastMemoLockScreenWidget: Widget {
             provider: FastFastFastMemoLockScreenTimelineProvider()
         ) { entry in
             FastFastFastMemoWidgetEntryView(entry: entry)
+                .widgetURL(URL(string: "fff-memo://write"))
         }
         .configurationDisplayName("매우매우매우 빠른 메모")
         .description("빠르게 작성 ㄱㄱ")
