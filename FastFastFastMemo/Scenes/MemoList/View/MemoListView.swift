@@ -6,6 +6,11 @@ struct MemoListView: View {
     private var intent: any MemoListIntentProtocol { container.intent }
     private var state: any MemoListStateProtocol { container.model }
     
+    @State var xOffset: Int = 0
+    @State var yOffset: Int = 0
+//    @AppStorage(UserDefaultsKeys.x.rawValue, store: .standard) var xOffset: Int = 0
+//    @AppStorage(UserDefaultsKeys.y.rawValue, store: .standard) var yOffset: Int = 0
+    
     var body: some View {
         NavigationStack {
             ZStack {
@@ -97,6 +102,20 @@ struct MemoListView: View {
 
     @ViewBuilder
     func memoFABButton(action: @escaping () -> Void) -> some View {
+        let dragGesture = DragGesture()
+            .onChanged { value in
+                xOffset = Int(value.location.x)
+                yOffset = Int(value.location.y)
+            }
+            .onEnded { value in
+                xOffset = Int(value.location.x)
+                yOffset = Int(value.location.y)
+            }
+
+        let longPressGesture = LongPressGesture(minimumDuration: 0.3)
+        
+        let combindGesture = longPressGesture.sequenced(before: dragGesture)
+
         Button(action: action) {
             Image(systemName: "plus")
                 .foregroundColor(.white)
@@ -107,5 +126,9 @@ struct MemoListView: View {
                 .clipShape(Circle())
                 .padding(24)
         }
+        .if(xOffset != 0 && yOffset != 0) {
+            $0.position(x: CGFloat(xOffset), y: CGFloat(yOffset))
+        }
+        .simultaneousGesture(combindGesture)
     }
 }

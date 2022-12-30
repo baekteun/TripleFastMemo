@@ -47,6 +47,8 @@
 		46AD56CA295E555F006858AC /* DeepLinkParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD56C9295E555F006858AC /* DeepLinkParser.swift */; };
 		46AD56CD295E573D006858AC /* MemoListDeepLinkParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD56CC295E573D006858AC /* MemoListDeepLinkParser.swift */; };
 		46AD56D2295E5C16006858AC /* MemoRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD56D1295E5C16006858AC /* MemoRowView.swift */; };
+		46AD56D5295E6A58006858AC /* UserDefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD56D4295E6A58006858AC /* UserDefaultsKeys.swift */; };
+		46AD56D8295E6DC9006858AC /* View+if.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD56D7295E6DC9006858AC /* View+if.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +114,8 @@
 		46AD56C9295E555F006858AC /* DeepLinkParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinkParser.swift; sourceTree = "<group>"; };
 		46AD56CC295E573D006858AC /* MemoListDeepLinkParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListDeepLinkParser.swift; sourceTree = "<group>"; };
 		46AD56D1295E5C16006858AC /* MemoRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoRowView.swift; sourceTree = "<group>"; };
+		46AD56D4295E6A58006858AC /* UserDefaultsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKeys.swift; sourceTree = "<group>"; };
+		46AD56D7295E6DC9006858AC /* View+if.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+if.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +195,7 @@
 		46AD5649295DAD32006858AC /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				46AD56D3295E6A4F006858AC /* UserDefaults */,
 				46AD56C8295E5558006858AC /* DeepLink */,
 				46AD56C1295DFEF0006858AC /* Enum */,
 				46AD5680295DDAC5006858AC /* Extensions */,
@@ -284,6 +289,7 @@
 		46AD5680295DDAC5006858AC /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				46AD56D6295E6DC5006858AC /* View */,
 				46AD5681295DDACE006858AC /* DateUtil.swift */,
 			);
 			path = Extensions;
@@ -386,6 +392,22 @@
 				46AD56D1295E5C16006858AC /* MemoRowView.swift */,
 			);
 			path = Memo;
+			sourceTree = "<group>";
+		};
+		46AD56D3295E6A4F006858AC /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				46AD56D4295E6A58006858AC /* UserDefaultsKeys.swift */,
+			);
+			path = UserDefaults;
+			sourceTree = "<group>";
+		};
+		46AD56D6295E6DC5006858AC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				46AD56D7295E6DC9006858AC /* View+if.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -502,6 +524,7 @@
 				46AD5682295DDACE006858AC /* DateUtil.swift in Sources */,
 				46AD56B9295DFDE1006858AC /* MemoLockerModel.swift in Sources */,
 				46AD567F295DC83C006858AC /* DeferView.swift in Sources */,
+				46AD56D5295E6A58006858AC /* UserDefaultsKeys.swift in Sources */,
 				46AD565D295DB175006858AC /* MemoListIntent.swift in Sources */,
 				46AD5648295DA8F9006858AC /* LocalDatabase.swift in Sources */,
 				46AD56CA295E555F006858AC /* DeepLinkParser.swift in Sources */,
@@ -518,6 +541,7 @@
 				46AD56C3295DFEF5006858AC /* MemoType.swift in Sources */,
 				46AD56CD295E573D006858AC /* MemoListDeepLinkParser.swift in Sources */,
 				46AD564C295DAD3E006858AC /* AppGroup.swift in Sources */,
+				46AD56D8295E6DC9006858AC /* View+if.swift in Sources */,
 				46AD56BE295DFE19006858AC /* MemoLockerIntent.swift in Sources */,
 				46AD5665295DB4E9006858AC /* MemoListView+build.swift in Sources */,
 				46AD56D2295E5C16006858AC /* MemoRowView.swift in Sources */,
