@@ -16,4 +16,12 @@ final class MemoLockerIntent: MemoLockerIntentProtocol {
     func onDelete(id: String) {
         model?.onDelete(id: id)
     }
+
+    func presentToToast(message: String) {
+        model?.presentToToast(message: message)
+    }
+
+    func dismissToToast() {
+        model?.dismissToToast()
+    }
 }

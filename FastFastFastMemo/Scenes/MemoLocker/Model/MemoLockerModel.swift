@@ -3,6 +3,8 @@ import GRDB
 
 final class MemoLockerModel: ObservableObject, MemoLockerStateProtocol {
     @Published var boxedMemoList: [MemoEntity] = []
+    @Published var isPresentedToast: Bool = false
+    @Published var toastMessage: String = ""
 }
 
 extension MemoLockerModel: MemoLockerActionProtocol {
@@ -18,5 +20,14 @@ extension MemoLockerModel: MemoLockerActionProtocol {
     func onDelete(id: String) {
         boxedMemoList.removeAll { $0.id == id }
         try? LocalDatabase.shared.delete(record: MemoEntity.self, key: id)
+    }
+
+    func presentToToast(message: String) {
+        isPresentedToast = true
+        toastMessage = message
+    }
+
+    func dismissToToast() {
+        isPresentedToast = false
     }
 }
