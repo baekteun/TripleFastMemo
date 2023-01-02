@@ -8,7 +8,7 @@ struct MemoLockerView: View {
     var body: some View {
         VStack {
             List(state.boxedMemoList, id: \.id) { memo in
-                MemoRowView(memo: memo)
+                MemoLockerRowView(memo: memo)
                     .swipeActions(edge: .trailing, allowsFullSwipe: true) {
                         Button("삭제") {
                             withAnimation {

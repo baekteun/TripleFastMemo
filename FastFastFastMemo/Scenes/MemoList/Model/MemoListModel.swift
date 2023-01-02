@@ -4,6 +4,8 @@ final class MemoListModel: ObservableObject, MemoListStateProtocol {
     @Published var memoList: [MemoEntity] = []
     @Published var isOnNewMemo: Bool = false
     @Published var newText: String = ""
+    @Published var isPresentedToast: Bool = false
+    @Published var toastMessage: String = ""
 }
 
 extension MemoListModel: MemoListActionProtocol {
@@ -29,5 +31,14 @@ extension MemoListModel: MemoListActionProtocol {
 
     func submitNewMemo() {
         newText = ""
+    }
+
+    func presentToToast(message: String) {
+        toastMessage = message
+        isPresentedToast = true
+    }
+
+    func dismissToToast() {
+        isPresentedToast = false
     }
 }

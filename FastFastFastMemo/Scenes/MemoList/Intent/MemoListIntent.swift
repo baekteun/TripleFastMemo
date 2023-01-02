@@ -55,8 +55,17 @@ final class MemoListIntent: MemoListIntentProtocol {
                 .order([Column("createdAt").desc])
                 .fetchAll(db)
         }) else { return }
-        model?.updateMemoList(memoList: memoList)
+        let filteredMemoList = memoList.filter { $0.createdAt.compare(Date()) == .orderedSame }
+        model?.updateMemoList(memoList: filteredMemoList)
         model?.submitNewMemo()
         model?.toggleNewMemo(toggle: false)
+    }
+
+    func presentToToast(message: String) {
+        model?.presentToToast(message: message)
+    }
+
+    func dismissToToast() {
+        model?.dismissToToast()
     }
 }

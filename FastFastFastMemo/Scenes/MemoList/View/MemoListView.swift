@@ -54,6 +54,14 @@ struct MemoListView: View {
                             }
                             .listRowSeparator(.hidden)
                             .listRowInsets(.init(top: 8, leading: 16, bottom: 8, trailing: 16))
+                            .contextMenu {
+                                Button {
+                                    UIPasteboard.general.string = memo.content
+                                    intent.presentToToast(message: "클립보드에 복사되었습니다!")
+                                } label: {
+                                    Label("복사", systemImage: "list.clipboard.fill")
+                                }
+                            }
                     }
                     .listStyle(.plain)
                 }
@@ -84,6 +92,14 @@ struct MemoListView: View {
                     }
                 }
             }
+            .fffToast(
+                isShowing: Binding(
+                    get: { state.isPresentedToast },
+                    set: { _ in intent.dismissToToast() }
+                ),
+                message: state.toastMessage,
+                style: .success
+            )
         }
         .onOpenURL { url in
             guard let components = URLComponents(url: url, resolvingAgainstBaseURL: false) else {

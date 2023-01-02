@@ -7,5 +7,7 @@ protocol MemoListIntentProtocol {
     func toggleNewMemo(toggle: Bool)
     func newTextChanged(new: String)
     func submitNewMemo(content: String)
+    func presentToToast(message: String)
+    func dismissToToast()
 }
 

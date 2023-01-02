@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		46ABAAF52962C9DE00EF8164 /* FFFToastStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46ABAAF42962C9DE00EF8164 /* FFFToastStyle.swift */; };
+		46ABAAF72962C9F000EF8164 /* FFFToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46ABAAF62962C9F000EF8164 /* FFFToast.swift */; };
+		46ABAAFA2962CC6300EF8164 /* MemoLockerRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46ABAAF92962CC6300EF8164 /* MemoLockerRowView.swift */; };
 		46AD5634295DA820006858AC /* FastFastFastMemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD5633295DA820006858AC /* FastFastFastMemoApp.swift */; };
 		46AD5638295DA822006858AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46AD5637295DA822006858AC /* Assets.xcassets */; };
 		46AD563B295DA822006858AC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46AD563A295DA822006858AC /* Preview Assets.xcassets */; };
@@ -76,6 +79,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		46ABAAF42962C9DE00EF8164 /* FFFToastStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFFToastStyle.swift; sourceTree = "<group>"; };
+		46ABAAF62962C9F000EF8164 /* FFFToast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFFToast.swift; sourceTree = "<group>"; };
+		46ABAAF92962CC6300EF8164 /* MemoLockerRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoLockerRowView.swift; sourceTree = "<group>"; };
 		46AD5630295DA820006858AC /* FastFastFastMemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FastFastFastMemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46AD5633295DA820006858AC /* FastFastFastMemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastFastFastMemoApp.swift; sourceTree = "<group>"; };
 		46AD5637295DA822006858AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -140,6 +146,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		46ABAAF32962C9D600EF8164 /* Toast */ = {
+			isa = PBXGroup;
+			children = (
+				46ABAAF42962C9DE00EF8164 /* FFFToastStyle.swift */,
+				46ABAAF62962C9F000EF8164 /* FFFToast.swift */,
+			);
+			path = Toast;
+			sourceTree = "<group>";
+		};
+		46ABAAF82962CC4E00EF8164 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				46ABAAF92962CC6300EF8164 /* MemoLockerRowView.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
 		46AD5627295DA820006858AC = {
 			isa = PBXGroup;
 			children = (
@@ -280,6 +303,7 @@
 		46AD567D295DC836006858AC /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				46ABAAF32962C9D600EF8164 /* Toast */,
 				46AD56D0295E5C12006858AC /* Memo */,
 				46AD567E295DC83C006858AC /* DeferView.swift */,
 			);
@@ -328,6 +352,7 @@
 		46AD56AF295DF9A7006858AC /* MemoLocker */ = {
 			isa = PBXGroup;
 			children = (
+				46ABAAF82962CC4E00EF8164 /* Component */,
 				46AD56BA295DFDFE006858AC /* Intent */,
 				46AD56B5295DFDAD006858AC /* Model */,
 				46AD56B0295DF9AA006858AC /* View */,
@@ -522,10 +547,12 @@
 			files = (
 				46AD56B4295DF9BD006858AC /* MemoLockerView.swift in Sources */,
 				46AD5682295DDACE006858AC /* DateUtil.swift in Sources */,
+				46ABAAF72962C9F000EF8164 /* FFFToast.swift in Sources */,
 				46AD56B9295DFDE1006858AC /* MemoLockerModel.swift in Sources */,
 				46AD567F295DC83C006858AC /* DeferView.swift in Sources */,
 				46AD56D5295E6A58006858AC /* UserDefaultsKeys.swift in Sources */,
 				46AD565D295DB175006858AC /* MemoListIntent.swift in Sources */,
+				46ABAAFA2962CC6300EF8164 /* MemoLockerRowView.swift in Sources */,
 				46AD5648295DA8F9006858AC /* LocalDatabase.swift in Sources */,
 				46AD56CA295E555F006858AC /* DeepLinkParser.swift in Sources */,
 				46AD5654295DAEAE006858AC /* MemoListView.swift in Sources */,
@@ -544,6 +571,7 @@
 				46AD56D8295E6DC9006858AC /* View+if.swift in Sources */,
 				46AD56BE295DFE19006858AC /* MemoLockerIntent.swift in Sources */,
 				46AD5665295DB4E9006858AC /* MemoListView+build.swift in Sources */,
+				46ABAAF52962C9DE00EF8164 /* FFFToastStyle.swift in Sources */,
 				46AD56D2295E5C16006858AC /* MemoRowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
