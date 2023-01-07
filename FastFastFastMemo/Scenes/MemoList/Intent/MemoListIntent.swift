@@ -12,13 +12,23 @@ final class MemoListIntent: MemoListIntentProtocol {
     }
 
     func onAppear() {
-        let memoList = try? database.readRecords(as: MemoEntity.self, query: { memo, db in
+        guard let memoList = try? database.readRecords(as: MemoEntity.self, query: { memo, db in
             try memo.filter(Column("memoType") == MemoType.publish.rawValue)
                 .order([Column("createdAt").desc])
                 .fetchAll(db)
-        })
+        }) else { return }
+        let filteredMemoList = memoList.filter { $0.createdAt.isSameDay(Date()) }
 
-        model?.updateMemoList(memoList: memoList ?? [])
+        model?.updateMemoList(memoList: filteredMemoList)
+        
+        guard let allMemoList = try? database.readRecords(as: MemoEntity.self, query: { memo, db in
+            try memo.filter(Column("memoType") == MemoType.publish.rawValue)
+                .fetchAll(db)
+                .filter { !$0.createdAt.isSameDay(Date()) }
+        }) else { return }
+        allMemoList.forEach {
+            try? database.delete(record: MemoEntity.self, key: $0.id)
+        }
     }
 
     func onDeleteMemo(id: String) {
@@ -55,7 +65,7 @@ final class MemoListIntent: MemoListIntentProtocol {
                 .order([Column("createdAt").desc])
                 .fetchAll(db)
         }) else { return }
-        let filteredMemoList = memoList.filter { $0.createdAt.compare(Date()) == .orderedSame }
+        let filteredMemoList = memoList.filter { $0.createdAt.isSameDay(Date()) }
         model?.updateMemoList(memoList: filteredMemoList)
         model?.submitNewMemo()
         model?.toggleNewMemo(toggle: false)

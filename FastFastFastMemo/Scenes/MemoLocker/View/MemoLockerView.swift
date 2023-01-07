@@ -9,6 +9,12 @@ struct MemoLockerView: View {
         VStack {
             List(state.boxedMemoList, id: \.id) { memo in
                 MemoLockerRowView(memo: memo)
+                    .swipeActions(edge: .leading, allowsFullSwipe: true) {
+                        Button("복사") {
+                            UIPasteboard.general.string = memo.content
+                        }
+                        .tint(.gray)
+                    }
                     .swipeActions(edge: .trailing, allowsFullSwipe: true) {
                         Button("삭제") {
                             withAnimation {

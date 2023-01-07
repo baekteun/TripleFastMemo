@@ -731,7 +731,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FastFastFastMemo/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "매우매우매우 빠른 메모";
+				INFOPLIST_KEY_CFBundleDisplayName = "빠르고빠르고빠른 메모";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -764,7 +764,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FastFastFastMemo/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "매우매우매우 빠른 메모";
+				INFOPLIST_KEY_CFBundleDisplayName = "빠르고빠르고빠른 메모";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

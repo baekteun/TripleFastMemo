@@ -37,6 +37,12 @@ struct MemoListView: View {
 
                     List(state.memoList, id: \.id) { memo in
                         MemoRowView(memo: memo)
+                            .swipeActions(edge: .leading, allowsFullSwipe: true) {
+                                Button("복사") {
+                                    UIPasteboard.general.string = memo.content
+                                }
+                                .tint(.gray)
+                            }
                             .swipeActions(edge: .trailing, allowsFullSwipe: true) {
                                 Button("삭제") {
                                     withAnimation {
