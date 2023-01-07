@@ -20,7 +20,7 @@ struct MemoRowView: View {
         .padding(4)
         .overlay {
             RoundedRectangle(cornerRadius: 4)
-                .stroke(Color.black)
+                .stroke(Color("MainBlack"))
         }
     }
 }

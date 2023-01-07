@@ -118,7 +118,7 @@ private struct FFFMemoAccessoryRectangular: View {
             ForEach(Array(entry.memos.prefix(3)), id: \.id) { memo in
                 HStack {
                     Text(memo.content)
-                        .foregroundColor(.gray)
+                        .foregroundColor(.white)
 
                     Spacer()
                 }
@@ -128,7 +128,7 @@ private struct FFFMemoAccessoryRectangular: View {
         .frame(maxWidth: .infinity)
         .background {
             RoundedRectangle(cornerRadius: 8)
-                .fill(Color.gray.opacity(0.3))
+                .fill(Color.black)
         }
     }
 }

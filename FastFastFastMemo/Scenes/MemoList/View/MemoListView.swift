@@ -27,7 +27,7 @@ struct MemoListView: View {
                         .padding(4)
                         .overlay {
                             RoundedRectangle(cornerRadius: 4)
-                                .stroke(Color.black)
+                                .stroke(Color("MainBlack"))
                         }
                         .padding(.horizontal, 16)
                         .onAppear {
@@ -139,10 +139,10 @@ struct MemoListView: View {
 
         Button(action: action) {
             Image(systemName: "plus")
-                .foregroundColor(.white)
+                .foregroundColor(Color("MainWhite"))
                 .frame(width: 64, height: 64)
                 .background {
-                    Color.black
+                    Color("MainBlack")
                 }
                 .clipShape(Circle())
                 .padding(24)
