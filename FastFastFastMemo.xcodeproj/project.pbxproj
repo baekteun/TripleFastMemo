@@ -52,6 +52,7 @@
 		46AD56D2295E5C16006858AC /* MemoRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD56D1295E5C16006858AC /* MemoRowView.swift */; };
 		46AD56D5295E6A58006858AC /* UserDefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD56D4295E6A58006858AC /* UserDefaultsKeys.swift */; };
 		46AD56D8295E6DC9006858AC /* View+if.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD56D7295E6DC9006858AC /* View+if.swift */; };
+		46F03A2629696324008DABF4 /* View+if.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD56D7295E6DC9006858AC /* View+if.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -581,6 +582,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46AD56A3295DDDEC006858AC /* AppGroup.swift in Sources */,
+				46F03A2629696324008DABF4 /* View+if.swift in Sources */,
 				46AD5691295DDCFE006858AC /* FastFastFastMemoWidgetLiveActivity.swift in Sources */,
 				46AD568F295DDCFE006858AC /* FastFastFastMemoWidgetBundle.swift in Sources */,
 				46AD56AC295DE7E1006858AC /* FastFastFastMemoWidgetEntryView.swift in Sources */,
@@ -798,7 +800,7 @@
 				INFOPLIST_FILE = FastFastFastMemoWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = FastFastFastMemoWidget;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -827,7 +829,7 @@
 				INFOPLIST_FILE = FastFastFastMemoWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = FastFastFastMemoWidget;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

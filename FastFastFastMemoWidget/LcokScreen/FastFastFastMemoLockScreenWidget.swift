@@ -39,15 +39,28 @@ struct FastFastFastMemoLockScreenWidget: Widget {
     let kind = "FastFastFastLockScreen"
 
     var body: some WidgetConfiguration {
-        StaticConfiguration(
-            kind: kind,
-            provider: FastFastFastMemoLockScreenTimelineProvider()
-        ) { entry in
-            FastFastFastMemoWidgetEntryView(entry: entry)
-                .widgetURL(URL(string: "fff-memo://write"))
+        if #available(iOS 16.0, *) {
+            return StaticConfiguration(
+                kind: kind,
+                provider: FastFastFastMemoLockScreenTimelineProvider()
+            ) { entry in
+                FastFastFastMemoWidgetEntryView(entry: entry)
+                    .widgetURL(URL(string: "fff-memo://write"))
+            }
+            .configurationDisplayName("매우매우매우 빠른 메모")
+            .description("빠르게 작성 ㄱㄱ")
+            .supportedFamilies([.systemSmall, .systemMedium, .systemLarge, .accessoryCircular, .accessoryRectangular])
+        } else {
+            return StaticConfiguration(
+                kind: kind,
+                provider: FastFastFastMemoLockScreenTimelineProvider()
+            ) { entry in
+                FastFastFastMemoWidgetEntryView(entry: entry)
+                    .widgetURL(URL(string: "fff-memo://write"))
+            }
+            .configurationDisplayName("매우매우매우 빠른 메모")
+            .description("빠르게 작성 ㄱㄱ")
+            .supportedFamilies([.systemSmall, .systemMedium, .systemLarge])
         }
-        .configurationDisplayName("매우매우매우 빠른 메모")
-        .description("빠르게 작성 ㄱㄱ")
-        .supportedFamilies([.systemSmall, .systemMedium, .systemLarge, .accessoryCircular, .accessoryRectangular])
     }
 }

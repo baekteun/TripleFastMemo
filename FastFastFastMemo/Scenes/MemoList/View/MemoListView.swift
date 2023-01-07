@@ -107,6 +107,7 @@ struct MemoListView: View {
                 style: .success
             )
         }
+        .navigationViewStyle(.stack)
         .onOpenURL { url in
             guard let components = URLComponents(url: url, resolvingAgainstBaseURL: false) else {
                 return

@@ -113,17 +113,17 @@ public extension LocalDatabase {
         var url = AppGroup.group.containerURL
 
         if #available(iOS 16, *) {
-            url.append(path: "TodayWhat")
+            url.append(path: "JustMemo")
         } else {
-            url.appendPathComponent("TodayWhat")
+            url.appendPathComponent("JustMemo")
         }
 
         try? FileManager.default.createDirectory(at: url, withIntermediateDirectories: true)
 
         if #available(iOS 16, *) {
-            url.append(path: "TodayWhat.sqlite")
+            url.append(path: "JustMemo.sqlite")
         } else {
-            url.appendPathComponent("TodayWhat.sqlite")
+            url.appendPathComponent("JustMemo.sqlite")
         }
         var dir = ""
 
