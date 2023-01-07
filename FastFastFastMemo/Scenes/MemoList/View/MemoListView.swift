@@ -10,7 +10,7 @@ struct MemoListView: View {
     @AppStorage(UserDefaultsKeys.y.rawValue, store: .standard) var yOffset: Int = 0
     
     var body: some View {
-        NavigationStack {
+        NavigationView {
             ZStack {
                 VStack {
                     if state.isOnNewMemo {
